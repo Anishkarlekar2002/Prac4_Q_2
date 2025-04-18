@@ -1,5 +1,6 @@
 const express = require("express");
 const http = require("http");
+const path = require("path");
 const bodyParser = require("body-parser");
 
 const app = express();
@@ -29,8 +30,8 @@ app.get("/home", (req, res) => {
 });
 
 // ✅ Corrected server start
-server.listen(3000, '0.0.0.0', () => {
-  console.log("Server is running on port 3000");
+server.listen(8082, '0.0.0.0', () => {
+  console.log("Server is running on port 8082");
 
   // Stop server after 120 seconds
   setTimeout(() => {
