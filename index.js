@@ -28,8 +28,8 @@ app.get("/home", (req, res) => {
   res.send(`Welcome, ${user}!`);
 });
 
-// Start server
-server.listen(8082, () => {
+// ✅ Corrected server start
+server.listen(8082, '0.0.0.0', () => {
   console.log("Server is running on port 8082");
 
   // Stop server after 120 seconds
