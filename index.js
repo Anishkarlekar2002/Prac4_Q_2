@@ -8,8 +8,8 @@ const server = http.createServer(app);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/login.html");
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'login.html'));
 });
 
 app.post("/login", function (req, res) {
@@ -29,8 +29,8 @@ app.get("/home", (req, res) => {
 });
 
 // ✅ Corrected server start
-server.listen(8082, '0.0.0.0', () => {
-  console.log("Server is running on port 8082");
+server.listen(3000, '0.0.0.0', () => {
+  console.log("Server is running on port 3000");
 
   // Stop server after 120 seconds
   setTimeout(() => {
